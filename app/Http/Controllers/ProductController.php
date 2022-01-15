@@ -42,6 +42,9 @@ class ProductController extends Controller
         $product->file_path = $req->file('file')->store('products');
         $product->save();
         return $product;
-        //products/4BWJzsFiZ0fPOSWAuksPj3Wr1KNbDCODC8oD3NIs.jpg'
+    }
+
+    public function search($key){
+        return Product::where('name', 'Like', "%$key%")->get();
     }
 }
