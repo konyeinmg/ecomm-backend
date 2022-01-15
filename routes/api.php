@@ -30,4 +30,6 @@ Route::get('list', [ProductController::class, 'list']);
 
 Route::delete('delete/{id}', [ProductController::class, 'delete']);
 
-Route::get('getProduct/{id}', [ProductController::class, 'getProduct']);
+Route::get('getproduct/{id}', [ProductController::class, 'getProduct']);
+
+Route::post('updateproduct/{id}', [ProductController::class, 'updateProduct']);
